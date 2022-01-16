@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap"
+    app:startDestination="@id/fragmentsLogin">
+
+    <fragment
+        android:id="@+id/fragmentsLogin"
+        android:name="com.example.game.Fragments.FragmentsLogin"
+        tools:layout="@layout/fragments_login"
+        android:label="FragmentsLogin" >
+
+        <action
+            android:id="@+id/action_fragmentsLogin_to_fragmentsProfile"
+            app:destination="@id/fragmentsProfile" />
+
+        <action
+            android:id="@+id/action_fragmentsLogin_to_fragmentsRegister"
+            app:destination="@id/fragmentsRegister" />
+
+        <action
+            android:id="@+id/action_fragmentsLogin_to_fragmentsPasswordReset"
+            app:destination="@id/fragmentsPasswordReset" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentsGame"
+        android:name="com.example.game.Fragments.FragmentsGame"
+        tools:layout="@layout/fragments_game"
+        android:label="FragmentsGame" >
+
+        <action
+            android:id="@+id/action_fragmentsGame_to_fragmentsProfile"
+            app:destination="@id/fragmentsProfile" />
+
+        <argument
+            android:name="name1"
+            app:argType="string"
+            android:defaultValue="plaier 1"/>
+
+        <argument
+            android:name="name2"
+            app:argType="string"
+            android:defaultValue="plaier 1"/>
+        <action
+            android:id="@+id/action_fragmentsGame_to_fragmentsWins"
+            app:destination="@id/fragmentsWins" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentsPasswordChange"
+        android:name="com.example.game.Fragments.FragmentsPasswordChange"
+        tools:layout="@layout/fragments_password_change"
+        android:label="FragmentsPasswordChange" >
+
+        <action
+            android:id="@+id/action_fragmentsPasswordChange_to_fragmentsProfile"
+            app:destination="@id/fragmentsProfile" />
+
+        <argument
+            android:name="passwordLog"
+            app:argType="string"
+            android:defaultValue="0"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentsPasswordReset"
+        android:name="com.example.game.Fragments.FragmentsPasswordReset"
+        tools:layout="@layout/fragments_password_reset"
+        android:label="FragmentsPasswordReset" >
+        <action
+            android:id="@+id/action_fragmentsPasswordReset_to_fragmentsLogin"
+            app:destination="@id/fragmentsLogin" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentsProfile"
+        android:name="com.example.game.Fragments.FragmentsProfile"
+        tools:layout="@layout/fragments_profile"
+        android:label="FragmentsProfile" >
+
+        <action
+            android:id="@+id/action_fragmentsProfile_to_fragmentsGame"
+            app:destination="@id/fragmentsGame" />
+
+        <action
+            android:id="@+id/action_fragmentsProfile_to_fragmentsPasswordChange"
+            app:destination="@id/fragmentsPasswordChange" />
+
+        <action
+            android:id="@+id/action_fragmentsProfile_to_fragmentsLogin"
+            app:destination="@id/fragmentsLogin" />
+
+        <argument
+            android:name="passwordLog"
+            app:argType="string"
+            android:defaultValue="0"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentsRegister"
+        android:name="com.example.game.Fragments.FragmentsRegister"
+        tools:layout="@layout/fragments_register"
+        android:label="FragmentsRegister" >
+
+        <action
+            android:id="@+id/action_fragmentsRegister_to_fragmentsProfile"
+            app:destination="@id/fragmentsProfile" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentsWins"
+        tools:layout="@layout/fragents_wins"
+        android:name="com.example.game.Fragments.FragmentsWins"
+        android:label="FragmentsWins" />
+
+</navigation>

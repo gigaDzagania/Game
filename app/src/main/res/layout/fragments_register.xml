@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#1D0150">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REGISTRATION"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/name"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:hint="Name"
+                android:inputType="text"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="2dp"/>
+
+            <EditText
+                android:id="@+id/surname"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:hint="Surname"
+                android:inputType="text"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/registrationEmail"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="📧 E-Mail"
+                android:inputType="textEmailAddress"
+                android:textSize="25dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/registrationPassword1"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="🔑 Password"
+                android:inputType="textPassword"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:id="@+id/registrationPassword2"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="🔑 Password"
+                android:inputType="textPassword"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:weightSum="1">
+
+            <CheckBox
+                android:id="@+id/checkboxMale"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Male 🙎‍♂"
+                android:textSize="20dp"
+                android:layout_weight="0.5"
+                android:layout_marginRight="2dp"/>
+
+            <CheckBox
+                android:id="@+id/checkboxFemale"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Female 🙎‍"
+                android:textSize="20dp"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="2dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/regRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:text="registration"
+            android:backgroundTint="#029E08"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>
